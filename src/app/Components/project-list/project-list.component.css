@@ -1,0 +1,26 @@
+.project-list {
+    margin-top: 20px;
+  }
+  
+  .project-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .project-table th, .project-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .project-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .project-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .project-table tr:hover {
+    background-color: #ddd;
+  }
+  

@@ -1,0 +1,20 @@
+<div *ngIf="projects" class="project-list">
+    <h2>List of Projects</h2>
+    <table class="project-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.id }}</td>
+          <td>{{ project.name }}</td>
+          <td>{{ project.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

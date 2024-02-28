@@ -1,0 +1,26 @@
+
+ <h2>All User</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>lastName</th>
+    
+            <th>Grade</th>
+            <th>Action</th>
+    
+            <!-- Add more headers here if needed -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName}}</td>
+            <td>{{ user.grade}}</td>
+            <td><button (click)="assignTraining(user.id)" class="btn1 btn-dark">assign-training</button></td>
+            <!-- Add more cells here for additional details -->
+          </tr>
+        </tbody>
+      </table>

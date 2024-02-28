@@ -1,0 +1,45 @@
+
+   <div *ngIf="successMessage" class="alert alert-success" role="alert">
+    {{ successMessage }}
+  </div>
+   <div class="container">
+    <h2>Add Training</h2>
+    <form [formGroup]="addTrainingForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <div *ngIf="addTrainingForm.controls['name'].invalid && addTrainingForm.controls['name'].touched"
+             class="text-danger">
+          Name is required.
+        </div>
+
+        <div class="form-group">
+          <label for="link">Link:</label>
+          <input type="text" class="form-control" id="link" formControlName="link">
+          <!-- Add validation for the link field if needed -->
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" class="form-control" id="description" formControlName="description">
+        <div *ngIf="addTrainingForm.controls['description'].invalid && addTrainingForm.controls['description'].touched"
+             class="text-danger">
+          Description is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="projectId">Project:</label>
+        <select class="form-control" id="projectId" formControlName="projectId">
+          <option *ngFor="let project of projects" [value]="project.id">{{ project.name }}</option>
+        </select>
+        <div *ngIf="addTrainingForm.controls['projectId'].invalid && addTrainingForm.controls['projectId'].touched"
+             class="text-danger">
+          Please select a project.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="addTrainingForm.invalid">Add Training</button>
+    </form>
+  </div>
+  

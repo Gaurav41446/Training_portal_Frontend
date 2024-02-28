@@ -1,0 +1,28 @@
+/* CSS for table */
+.trainings-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .trainings-table th, .trainings-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .trainings-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* CSS for heading */
+  .trainings-table h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+
+  a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }

@@ -1,0 +1,29 @@
+
+<!-- assign-training.component.html -->
+<header></header>
+<h2>Assigned Trainings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Training ID</th>
+      <th>Training Name</th>
+      <th> link</th>
+      <th>Training description</th>
+
+      <!-- Add more table headers as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let training of assignedTrainings">
+      <td>{{ training.training.id }}</td>
+      <td>{{ training.training.name }}</td>
+      <td>{{ training.training.link }}</td>
+      <td>{{ training.training.description }}</td>
+      
+      <!-- Display more properties of the training object as needed -->
+    </tr>
+  </tbody>
+</table>
+
+<!-- Handle error case -->

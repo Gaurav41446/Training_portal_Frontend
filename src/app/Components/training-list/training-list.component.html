@@ -1,0 +1,27 @@
+
+
+<div class="trainings-table">
+  <h2>Available Trainings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>link</th>
+        <th>Description</th>
+        <th *ngIf="id != null">Action</th>
+        <!-- Add more headers here if needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let training of trainings">
+        <td>{{ training.id }}</td>
+        <td>{{ training.name }}</td>
+        <td><a [href]="training.link" target="_blank">{{ training.link }}</a></td>
+        <td>{{ training.description }}</td>
+        <td *ngIf="id != null"><button (click)="addTraining(id,training.id)">Add</button></td>
+        <!-- Add more cells here for additional details -->
+      </tr>
+    </tbody>
+  </table>
+</div>
